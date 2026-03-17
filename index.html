@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Pictrix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<h1>🧩 Pictrix</h1>
+<p>Create. Shuffle. Solve.</p>
+
+<button id="themeToggle">🌙 Dark Mode</button>
+
+<input type="file" id="upload">
+
+<div class="info">
+  ⏱️ <span id="time">0</span>s
+  🎯 <span id="moves">0</span> moves
+</div>
+
+<div class="buttons">
+  <button onclick="shuffle()">🔀 Shuffle</button>
+  <button onclick="preview()">👁 Preview</button>
+</div>
+
+<p>🏆 Best Time: <span id="bestTime">--</span> | Best Moves: <span id="bestMoves">--</span></p>
+
+<div id="puzzle"></div>
+
+<!-- Overlay -->
+<div id="overlay">
+  <div class="box">
+    <h2>🎉 Puzzle Completed!</h2>
+    <p id="final"></p>
+    <button onclick="restart()">Play Again</button>
+  </div>
+</div>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<audio id="winSound" src="win sound.mp3"></audio>
+
+<script src="script.js"></script>
+</div>
+</body>
+</html>
